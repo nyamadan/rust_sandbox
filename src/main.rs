@@ -1,3 +1,3 @@
 fn main() {
-    let (x, y) = (1, 2);
+    let x:u32 = 5;
 }
