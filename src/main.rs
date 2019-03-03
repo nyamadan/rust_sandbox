@@ -1,4 +1,12 @@
 fn main() {
-    let mut x = 5;
-    x = 10;
+    let x: i32 = 17;
+    {
+        println!("{}", x);
+        let x = 12;
+        println!("{}", x);
+    }
+
+    println!("{}", x);
+    let x = 42;
+    println!("{}", x);
 }
