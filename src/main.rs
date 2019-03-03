@@ -1,3 +1,3 @@
 fn main() {
-    let _x = 5;
+    let (x, y) = (1, 2);
 }
