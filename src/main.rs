@@ -1,3 +1,4 @@
 fn main() {
-    let x:u32 = 5; // x: i32
+    let x = 5;
+    x = 10;
 }
