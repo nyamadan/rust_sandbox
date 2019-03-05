@@ -1,8 +1,22 @@
-fn main() {
-    let mut x: i32 = 1;
-    x = 7;
-    let x = x; // xはイミュータブルになって7に束縛されました
+fn print_number(x: i32) {
+    println!("x is: {}", x);
+}
 
-    let y = 4;
-    let y = "I can also be bound to text!"; // yは違う型になりました
+fn print_sum(x: i32, y: i32) {
+    println!("sum is: {}", x + y);
+}
+
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn diverges() -> ! {
+    panic!("This function never returns!");
+}
+
+fn main() {
+    let f: fn(i32) -> i32 = add_one;
+    print_sum(f(5), add_one(5));
+    print_number(4);
+    let _x: i32 = diverges();
 }
