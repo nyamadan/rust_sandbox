@@ -1,18 +1,17 @@
 fn main() {
     let mut x = 5;
-    let mut done = false;
 
-    while !done {
+    loop {
         x += x - 3;
 
         println!("{}", x);
 
         if x % 5 == 0 {
-            done = true;
+            break;
         }
     }
 
-    for x in 0..19 {
-        println!("{}", x);
+    for (i, j) in (5..10).enumerate() {
+        println!("{}, {}", i, j);
     }
 }
